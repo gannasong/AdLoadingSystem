@@ -8,11 +8,17 @@
 import Foundation
 import GoogleMobileAds
 
-public class GADAdClient: NSObject {
+public protocol AdClient {
+  typealias AdResult = Result<GADNativeAd, Error>
+
+  func laod(completion: @escaping (AdResult) -> Void)
+}
+
+public class GADAdClient: NSObject, AdClient {
   private let loader: GADAdLoader
   private var receivedAdResult: ((AdResult) -> Void)?
 
-  public typealias AdResult = Result<GADNativeAd, Error>
+//  public typealias AdResult = Result<GADNativeAd, Error>
 
   private let adRequest: GADRequest = {
     let adRequest = GADRequest()
