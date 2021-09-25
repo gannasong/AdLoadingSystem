@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		06F61E4C42300C131E746220 /* Pods_AdLoaderSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3C00D3103FD1AAE1569CE4 /* Pods_AdLoaderSystem.framework */; };
+		4914388E26FECECC00B8F4D4 /* SimpleLinkedList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4914388D26FECECC00B8F4D4 /* SimpleLinkedList.framework */; };
+		4914388F26FECECC00B8F4D4 /* SimpleLinkedList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4914388D26FECECC00B8F4D4 /* SimpleLinkedList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4984E4CD26EB41460064BEDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984E4CC26EB41460064BEDE /* AppDelegate.swift */; };
 		4984E4CF26EB41460064BEDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984E4CE26EB41460064BEDE /* SceneDelegate.swift */; };
 		4984E4D126EB41460064BEDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984E4D026EB41460064BEDE /* ViewController.swift */; };
@@ -30,8 +32,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4914389026FECECC00B8F4D4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4914388F26FECECC00B8F4D4 /* SimpleLinkedList.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4697A09B72F638DD8429E64B /* Pods-AdLoaderSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLoaderSystemTests.release.xcconfig"; path = "Target Support Files/Pods-AdLoaderSystemTests/Pods-AdLoaderSystemTests.release.xcconfig"; sourceTree = "<group>"; };
+		4914388D26FECECC00B8F4D4 /* SimpleLinkedList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SimpleLinkedList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4984E4C926EB41460064BEDE /* AdLoaderSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdLoaderSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4984E4CC26EB41460064BEDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4984E4CE26EB41460064BEDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F61E4C42300C131E746220 /* Pods_AdLoaderSystem.framework in Frameworks */,
+				4914388E26FECECC00B8F4D4 /* SimpleLinkedList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +157,7 @@
 		6272AB7D20AA999DE5B0E451 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4914388D26FECECC00B8F4D4 /* SimpleLinkedList.framework */,
 				9F3C00D3103FD1AAE1569CE4 /* Pods_AdLoaderSystem.framework */,
 				6E7C1180DF1D9A499A331A55 /* Pods_AdLoaderSystemTests.framework */,
 			);
@@ -157,6 +176,7 @@
 				4984E4C626EB41460064BEDE /* Frameworks */,
 				4984E4C726EB41460064BEDE /* Resources */,
 				F92CA0054BA9D0FCB7C0AC49 /* [CP] Embed Pods Frameworks */,
+				4914389026FECECC00B8F4D4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -481,6 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GanNaSong.AdLoaderSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos iphoneos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -501,6 +522,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GanNaSong.AdLoaderSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos iphoneos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../SimpleLinkedList/SimpleLinkedList.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AdLoaderSystem.xcodeproj">
    </FileRef>
    <FileRef

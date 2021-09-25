@@ -7,14 +7,18 @@
 
 import XCTest
 import AdLoaderSystem
+import SimpleLinkedList
+import GoogleMobileAds
 
 class AdLoadingSystem {
-
+  var nativeAds = SimpleLinkedList<GADNativeAd>()
 }
 
 class AdLoadingSystemTests: XCTestCase {
 
-  func test() {
+  func test_init_nativeAdsIsEmpty() {
     let sut = AdLoadingSystem()
+
+    XCTAssertTrue(sut.nativeAds.isEmpty)
   }
 }
