@@ -9,7 +9,7 @@ import Foundation
 import GoogleMobileAds
 
 public protocol AdClient {
-  typealias AdResult = Result<GADNativeAd, Error>
+  typealias AdResult = Result<GADNativeAd, GADAdClient.AdError>
 
   func laod(completion: @escaping (AdResult) -> Void)
 }
@@ -18,7 +18,9 @@ public class GADAdClient: NSObject, AdClient {
   private let loader: GADAdLoader
   private var receivedAdResult: ((AdResult) -> Void)?
 
-//  public typealias AdResult = Result<GADNativeAd, Error>
+  public enum AdError: Swift.Error {
+    case noAdToShow
+  }
 
   private let adRequest: GADRequest = {
     let adRequest = GADRequest()
@@ -49,7 +51,8 @@ public class GADAdClient: NSObject, AdClient {
 
 extension GADAdClient: GADAdLoaderDelegate {
   public func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
-    receivedAdResult?(.failure(error))
+    print("❌ error: ", error.localizedDescription)
+    receivedAdResult?(.failure(.noAdToShow))
   }
 }
 

@@ -19,7 +19,14 @@ class AdLoadingSystem {
   }
 
   func requestAd() {
-    client.laod { _ in }
+    client.laod { [weak self] result in
+      switch result {
+      case let .success(nativeAd):
+        self?.nativeAds.append(value: nativeAd)
+      case let .failure(error):
+        print("error: ", error.localizedDescription)
+      }
+    }
   }
 }
 
@@ -31,7 +38,7 @@ class AdLoadingSystemTests: XCTestCase {
     XCTAssertTrue(sut.nativeAds.isEmpty)
   }
 
-  func test_request_requestAdsFromSystem() {
+  func test_requestAd_requestAdsFromSystem() {
     let (sut, client) = makeSUT()
 
     sut.requestAd()
@@ -39,6 +46,16 @@ class AdLoadingSystemTests: XCTestCase {
 
     sut.requestAd()
     XCTAssertEqual(client.requestCounts, 2)
+  }
+
+  func test_requestAd_deliverAdOnClientSuccess() {
+    let (sut, client) = makeSUT()
+    let nativeAd = GADNativeAd()
+
+    sut.requestAd()
+    client.complete(natvieAd: nativeAd)
+
+    XCTAssertEqual(sut.nativeAds.first?.value, nativeAd)
   }
 
   // MARK: - Helper
@@ -58,6 +75,10 @@ class AdLoadingSystemTests: XCTestCase {
 
     func laod(completion: @escaping (AdResult) -> Void) {
       messages.append(completion)
+    }
+
+    func complete(natvieAd: GADNativeAd, index: Int = 0) {
+      messages[index](.success(natvieAd))
     }
   }
 }
