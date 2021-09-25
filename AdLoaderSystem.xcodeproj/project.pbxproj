@@ -3,16 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06F61E4C42300C131E746220 /* Pods_AdLoaderSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3C00D3103FD1AAE1569CE4 /* Pods_AdLoaderSystem.framework */; };
 		4984E4CD26EB41460064BEDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984E4CC26EB41460064BEDE /* AppDelegate.swift */; };
 		4984E4CF26EB41460064BEDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984E4CE26EB41460064BEDE /* SceneDelegate.swift */; };
 		4984E4D126EB41460064BEDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984E4D026EB41460064BEDE /* ViewController.swift */; };
 		4984E4D626EB41480064BEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4984E4D526EB41480064BEDE /* Assets.xcassets */; };
 		4984E4D926EB41480064BEDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4984E4D726EB41480064BEDE /* LaunchScreen.storyboard */; };
-		4984E4E426EB41480064BEDE /* AdLoaderSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984E4E326EB41480064BEDE /* AdLoaderSystemTests.swift */; };
+		4984E4E426EB41480064BEDE /* GADAdClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984E4E326EB41480064BEDE /* GADAdClientTests.swift */; };
+		4984E68726EB69E60064BEDE /* GADAdClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984E68626EB69E60064BEDE /* GADAdClient.swift */; };
+		4984E68926EB6ACB0064BEDE /* AdLoadingSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984E68826EB6ACB0064BEDE /* AdLoadingSystemTests.swift */; };
+		49DBBBD226F5BA4800B1058D /* LinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBBBD126F5BA4800B1058D /* LinkedListTests.swift */; };
+		AEA62AC240E5B3093FC18434 /* Pods_AdLoaderSystemTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7C1180DF1D9A499A331A55 /* Pods_AdLoaderSystemTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4697A09B72F638DD8429E64B /* Pods-AdLoaderSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLoaderSystemTests.release.xcconfig"; path = "Target Support Files/Pods-AdLoaderSystemTests/Pods-AdLoaderSystemTests.release.xcconfig"; sourceTree = "<group>"; };
 		4984E4C926EB41460064BEDE /* AdLoaderSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdLoaderSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4984E4CC26EB41460064BEDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4984E4CE26EB41460064BEDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,8 +40,16 @@
 		4984E4D826EB41480064BEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4984E4DA26EB41480064BEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4984E4DF26EB41480064BEDE /* AdLoaderSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdLoaderSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4984E4E326EB41480064BEDE /* AdLoaderSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdLoaderSystemTests.swift; sourceTree = "<group>"; };
+		4984E4E326EB41480064BEDE /* GADAdClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADAdClientTests.swift; sourceTree = "<group>"; };
 		4984E4E526EB41480064BEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4984E68626EB69E60064BEDE /* GADAdClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADAdClient.swift; sourceTree = "<group>"; };
+		4984E68826EB6ACB0064BEDE /* AdLoadingSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdLoadingSystemTests.swift; sourceTree = "<group>"; };
+		49DBBBD126F5BA4800B1058D /* LinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; };
+		6305965B94018A8DE9F95C8A /* Pods-AdLoaderSystemTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLoaderSystemTests.debug.xcconfig"; path = "Target Support Files/Pods-AdLoaderSystemTests/Pods-AdLoaderSystemTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E7C1180DF1D9A499A331A55 /* Pods_AdLoaderSystemTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdLoaderSystemTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C3D30921757AD11A8A61D4B /* Pods-AdLoaderSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLoaderSystem.release.xcconfig"; path = "Target Support Files/Pods-AdLoaderSystem/Pods-AdLoaderSystem.release.xcconfig"; sourceTree = "<group>"; };
+		9F3C00D3103FD1AAE1569CE4 /* Pods_AdLoaderSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdLoaderSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D77FA2B26A0A03EEAAFA2D /* Pods-AdLoaderSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdLoaderSystem.debug.xcconfig"; path = "Target Support Files/Pods-AdLoaderSystem/Pods-AdLoaderSystem.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F61E4C42300C131E746220 /* Pods_AdLoaderSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA62AC240E5B3093FC18434 /* Pods_AdLoaderSystemTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +78,8 @@
 				4984E4CB26EB41460064BEDE /* AdLoaderSystem */,
 				4984E4E226EB41480064BEDE /* AdLoaderSystemTests */,
 				4984E4CA26EB41460064BEDE /* Products */,
+				4F81750EADA6BC8180F49915 /* Pods */,
+				6272AB7D20AA999DE5B0E451 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +101,7 @@
 				4984E4D526EB41480064BEDE /* Assets.xcassets */,
 				4984E4D726EB41480064BEDE /* LaunchScreen.storyboard */,
 				4984E4DA26EB41480064BEDE /* Info.plist */,
+				4984E68626EB69E60064BEDE /* GADAdClient.swift */,
 			);
 			path = AdLoaderSystem;
 			sourceTree = "<group>";
@@ -90,10 +109,40 @@
 		4984E4E226EB41480064BEDE /* AdLoaderSystemTests */ = {
 			isa = PBXGroup;
 			children = (
-				4984E4E326EB41480064BEDE /* AdLoaderSystemTests.swift */,
+				49DBBA4826F5B9D800B1058D /* Model */,
+				4984E4E326EB41480064BEDE /* GADAdClientTests.swift */,
+				4984E68826EB6ACB0064BEDE /* AdLoadingSystemTests.swift */,
 				4984E4E526EB41480064BEDE /* Info.plist */,
 			);
 			path = AdLoaderSystemTests;
+			sourceTree = "<group>";
+		};
+		49DBBA4826F5B9D800B1058D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49DBBBD126F5BA4800B1058D /* LinkedListTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F81750EADA6BC8180F49915 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8D77FA2B26A0A03EEAAFA2D /* Pods-AdLoaderSystem.debug.xcconfig */,
+				7C3D30921757AD11A8A61D4B /* Pods-AdLoaderSystem.release.xcconfig */,
+				6305965B94018A8DE9F95C8A /* Pods-AdLoaderSystemTests.debug.xcconfig */,
+				4697A09B72F638DD8429E64B /* Pods-AdLoaderSystemTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6272AB7D20AA999DE5B0E451 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F3C00D3103FD1AAE1569CE4 /* Pods_AdLoaderSystem.framework */,
+				6E7C1180DF1D9A499A331A55 /* Pods_AdLoaderSystemTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4984E4F326EB41480064BEDE /* Build configuration list for PBXNativeTarget "AdLoaderSystem" */;
 			buildPhases = (
+				56A9FB80C1DE174B44C07820 /* [CP] Check Pods Manifest.lock */,
 				4984E4C526EB41460064BEDE /* Sources */,
 				4984E4C626EB41460064BEDE /* Frameworks */,
 				4984E4C726EB41460064BEDE /* Resources */,
+				F92CA0054BA9D0FCB7C0AC49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +171,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4984E4F626EB41480064BEDE /* Build configuration list for PBXNativeTarget "AdLoaderSystemTests" */;
 			buildPhases = (
+				7B6AEB265DDE1E61448FF638 /* [CP] Check Pods Manifest.lock */,
 				4984E4DB26EB41480064BEDE /* Sources */,
 				4984E4DC26EB41480064BEDE /* Frameworks */,
 				4984E4DD26EB41480064BEDE /* Resources */,
@@ -190,11 +242,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		56A9FB80C1DE174B44C07820 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdLoaderSystem-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B6AEB265DDE1E61448FF638 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdLoaderSystemTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F92CA0054BA9D0FCB7C0AC49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdLoaderSystem/Pods-AdLoaderSystem-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdLoaderSystem/Pods-AdLoaderSystem-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdLoaderSystem/Pods-AdLoaderSystem-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4984E4C526EB41460064BEDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4984E68726EB69E60064BEDE /* GADAdClient.swift in Sources */,
 				4984E4D126EB41460064BEDE /* ViewController.swift in Sources */,
 				4984E4CD26EB41460064BEDE /* AppDelegate.swift in Sources */,
 				4984E4CF26EB41460064BEDE /* SceneDelegate.swift in Sources */,
@@ -205,7 +322,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4984E4E426EB41480064BEDE /* AdLoaderSystemTests.swift in Sources */,
+				4984E68926EB6ACB0064BEDE /* AdLoadingSystemTests.swift in Sources */,
+				49DBBBD226F5BA4800B1058D /* LinkedListTests.swift in Sources */,
+				4984E4E426EB41480064BEDE /* GADAdClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +468,7 @@
 		};
 		4984E4F426EB41480064BEDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8D77FA2B26A0A03EEAAFA2D /* Pods-AdLoaderSystem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -368,6 +488,7 @@
 		};
 		4984E4F526EB41480064BEDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C3D30921757AD11A8A61D4B /* Pods-AdLoaderSystem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -387,6 +508,7 @@
 		};
 		4984E4F726EB41480064BEDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6305965B94018A8DE9F95C8A /* Pods-AdLoaderSystemTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -409,6 +531,7 @@
 		};
 		4984E4F826EB41480064BEDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4697A09B72F638DD8429E64B /* Pods-AdLoaderSystemTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
