@@ -10,26 +10,6 @@ import AdLoaderSystem
 import SimpleLinkedList
 import GoogleMobileAds
 
-class AdLoadingSystem {
-  var nativeAds = SimpleLinkedList<GADNativeAd>()
-  let client: AdClient
-
-  init(client: AdClient) {
-    self.client = client
-  }
-
-  func requestAd() {
-    client.laod { [weak self] result in
-      switch result {
-      case let .success(nativeAd):
-        self?.nativeAds.append(value: nativeAd)
-      case let .failure(error):
-        print("error: ", error.localizedDescription)
-      }
-    }
-  }
-}
-
 class AdLoadingSystemTests: XCTestCase {
 
   func test_init_nativeAdsIsEmpty() {
@@ -58,6 +38,17 @@ class AdLoadingSystemTests: XCTestCase {
     XCTAssertEqual(sut.nativeAds.first?.value, nativeAd)
   }
 
+  func test_getAd_getNativeAdFromList() {
+    let (sut, client) = makeSUT()
+    let deliverAd = GADNativeAd()
+    sut.requestAd()
+    client.complete(natvieAd: deliverAd)
+
+    let receivedAd = sut.getNativeAd()
+
+    XCTAssertEqual(receivedAd, deliverAd)
+  }
+
   // MARK: - Helper
 
   private func makeSUT() -> (sut: AdLoadingSystem, client: AdClientSpy) {
@@ -75,6 +66,10 @@ class AdLoadingSystemTests: XCTestCase {
 
     func laod(completion: @escaping (AdResult) -> Void) {
       messages.append(completion)
+    }
+
+    func complete(with error: GADAdClient.AdError, at index: Int = 0) {
+      messages[index](.failure(.noAdToShow))
     }
 
     func complete(natvieAd: GADNativeAd, index: Int = 0) {

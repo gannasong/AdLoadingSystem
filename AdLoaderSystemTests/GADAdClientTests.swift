@@ -43,10 +43,37 @@ class GADAdClientTests: XCTestCase {
     XCTAssertNil(receivedError)
   }
 
+  func test_load_requestAdWithErrorFromUnitID() {
+    let sut = makeSUT(unitID: "error-unitID")
+    let exp = expectation(description: "Wait request ad completion.")
+
+
+    var receivedNativeAd: GADNativeAd?
+    var receivedError: Error?
+
+    sut.laod { result in
+      switch result {
+      case let .success(nativeAd):
+        receivedNativeAd = nativeAd
+        print("✅ > GADAdClient received nativeAd: ", nativeAd)
+      case let .failure(error):
+        receivedError = error
+        print("🛑 > GADAdClient request fail:: ", error.localizedDescription)
+      }
+
+      exp.fulfill()
+    }
+
+    wait(for: [exp], timeout: 5.0)
+
+    XCTAssertNil(receivedNativeAd)
+    XCTAssertNotNil(receivedError)
+  }
+
   // MARK: - Helpers
 
-  private func makeSUT() -> GADAdClient {
-    let loader =  GADAdLoader(adUnitID: "ca-app-pub-3940256099942544/3986624511",
+  private func makeSUT(unitID: String = "ca-app-pub-3940256099942544/3986624511") -> GADAdClient {
+    let loader =  GADAdLoader(adUnitID: unitID,
                               rootViewController: FakeViewController(),
                               adTypes: [.native],
                               options: [])
